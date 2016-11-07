@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>887532964427-ijon9pahp9eb8a53k8q30gbvcg304lhd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.887532964427-ijon9pahp9eb8a53k8q30gbvcg304lhd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBpgJ3Isc1J0K7wG5ydoDMHEqaltSoaN3g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>887532964427</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.FacebookPirata</string>
+	<key>PROJECT_ID</key>
+	<string>facebookpirata-6b948</string>
+	<key>STORAGE_BUCKET</key>
+	<string>facebookpirata-6b948.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:887532964427:ios:923727846ff57813</string>
+	<key>DATABASE_URL</key>
+	<string>https://facebookpirata-6b948.firebaseio.com</string>
+</dict>
+</plist>

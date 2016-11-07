@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cxa-88-AW3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FacebookPirata" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMB-m8-wfS" customClass="LoginHeaderView" customModule="FacebookPirata" customModuleProvider="target">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jcxoGpRRi" translatesAutoresizingMaskIntoConstraints="NO" id="5UR-dD-jCI">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="YSx-A0-cTJ"/>
+                                            <constraint firstAttribute="height" constant="150" id="u47-gf-mhR"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.6705882352941176" blue="0.035294117647058823" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5UR-dD-jCI" firstAttribute="centerY" secondItem="eMB-m8-wfS" secondAttribute="centerY" id="40o-1g-qrS"/>
+                                    <constraint firstItem="5UR-dD-jCI" firstAttribute="centerX" secondItem="eMB-m8-wfS" secondAttribute="centerX" id="PRl-Sc-L1U"/>
+                                    <constraint firstAttribute="height" constant="150" id="j8r-is-ecQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-56-Uqs">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Si no tienes un usuario creado, automáticamente se creará uno." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1V-Mt-dib">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="359" id="8Vo-qb-Uaz"/>
+                                            <constraint firstAttribute="height" constant="59" id="aAF-B4-3Xy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.25098039215686274" green="0.21568627450980393" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.6705882353" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="f1V-Mt-dib" firstAttribute="centerY" secondItem="Fhh-56-Uqs" secondAttribute="centerY" id="fom-kM-zqP"/>
+                                    <constraint firstItem="f1V-Mt-dib" firstAttribute="centerX" secondItem="Fhh-56-Uqs" secondAttribute="centerX" id="scR-3j-3wN"/>
+                                    <constraint firstAttribute="height" constant="75" id="zY6-Lq-haJ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLY-St-UB9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="dBy-hW-fMd"/>
+                                    <constraint firstAttribute="height" constant="100" id="geB-na-zX2"/>
+                                </constraints>
+                                <state key="normal" title="Facebook" image="facebook"/>
+                                <connections>
+                                    <action selector="facebookBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fZ2-yT-Mgk"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-gc-cqk">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Correo Electrónico" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26a-Ny-5rG" customClass="SexyTextField" customModule="FacebookPirata" customModuleProvider="target">
+                                        <color key="textColor" red="0.25098039220000001" green="0.2156862745" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Svk-yg-6zu" customClass="SexyTextField" customModule="FacebookPirata" customModuleProvider="target">
+                                        <color key="textColor" red="0.25098039220000001" green="0.2156862745" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmU-sw-zbq">
+                                        <color key="backgroundColor" red="1" green="0.6705882353" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Iniciar Sesión">
+                                            <color key="titleColor" red="0.25098039220000001" green="0.2156862745" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="iniciarSesionBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="395-j5-kEq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="C8E-Cm-1zp"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zLY-St-UB9" firstAttribute="top" secondItem="eMB-m8-wfS" secondAttribute="bottom" constant="52" id="21m-hl-Fu3"/>
+                            <constraint firstItem="Kx6-gc-cqk" firstAttribute="top" secondItem="zLY-St-UB9" secondAttribute="bottom" constant="23" id="5Zd-fP-2h9"/>
+                            <constraint firstItem="eMB-m8-wfS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7EV-pg-Z0O"/>
+                            <constraint firstItem="zLY-St-UB9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Vr-VO-4uo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kx6-gc-cqk" secondAttribute="trailing" id="J4f-DE-IxP"/>
+                            <constraint firstItem="Fhh-56-Uqs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jsh-jh-FN9"/>
+                            <constraint firstItem="eMB-m8-wfS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LQz-ai-UdJ"/>
+                            <constraint firstAttribute="trailing" secondItem="eMB-m8-wfS" secondAttribute="trailing" id="LaF-AG-RB5"/>
+                            <constraint firstAttribute="trailing" secondItem="Fhh-56-Uqs" secondAttribute="trailing" id="Ukg-Xj-s99"/>
+                            <constraint firstItem="Fhh-56-Uqs" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="nJH-fw-FRE"/>
+                            <constraint firstItem="Kx6-gc-cqk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rhB-Kf-7PU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9dr-Uj-Avk"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="Svk-yg-6zu" id="Wzt-Tl-8oO"/>
+                        <outlet property="txtUsuario" destination="26a-Ny-5rG" id="czM-t8-zCe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.2" y="-543.77811094452773"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d5o-r7-ZhY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cxa-88-AW3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IKt-ei-gLO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vtq-uv-n9B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EpX-uT-XEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="-543.77811094452773"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook" width="225" height="225"/>
+        <image name="jcxoGpRRi" width="419" height="420"/>
+    </resources>
+</document>
