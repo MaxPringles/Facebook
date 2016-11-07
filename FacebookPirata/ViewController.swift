@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 import FirebaseAuth
+import SwiftKeychainWrapper
 
 class ViewController: UIViewController {
 
@@ -20,7 +21,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         FIRMessaging.messaging().subscribe(toTopic: "/topics/news")
         navigationController?.navigationBar.isHidden = true
+        
+        if (KeychainWrapper.standard.string(forKey: "FB_UID") != nil) || (KeychainWrapper.standard.string(forKey: "EMAIL_UID") != nil) {
+            print("El usuario ya había ingresado anteriormente")
+            //Pasar al siguiente VC
+            
+        }
     }
+    
     @IBAction func iniciarSesionBtnPressed(_ sender: UIButton) {
         if let email = txtUsuario.text, let pwd = txtPassword.text {
             FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: {
@@ -32,14 +40,29 @@ class ViewController: UIViewController {
                         print("Favor de ingresar un password de más de 6 caracteres.")
                     } else if err.code == ERROR_ACCOUNT_ALREADY_USED {
                         print("La cuenta de correo ya está siendo usada.")
-//                        FIRAuth
+                        FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: {user, error in
+                            if error != nil, let err = error as? NSError {
+                                print(err)
+                                if err.code == ERROR_INVALID_PASSWORD {
+                                    print("El password ingresado no es válido.")
+                                } else {
+                                    
+                                }
+                            } else {
+                                //Ir al siguiente VC
+                                print("Login Email exitoso")
+                                KeychainWrapper.standard.set(user!.uid, forKey: "UID")
+                            }
+                        })
                     }
                 } else {
                     print("Usuario: \(user?.displayName)")
+                    KeychainWrapper.standard.set(user!.uid, forKey: "FB_UID")
                 }
             })
         }
     }
+    
     @IBAction func facebookBtnPressed(_ sender: UIButton) {
         let loginManager = FBSDKLoginManager()
         loginManager.logIn(withReadPermissions: ["email"], from: self) {
@@ -65,6 +88,9 @@ class ViewController: UIViewController {
                 print("No se pudo autenticar con Firebase: Error: \(error.debugDescription)")
             } else {
                 print("Se autenticó con éxito con Firebase")
+                
+                print("Usuario: \(user?.displayName)")
+                KeychainWrapper.standard.set(user!.uid, forKey: "FB_UID")
             }
         })
     }
